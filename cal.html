@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggler</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="calcu.js"></script>
+</head>
+<body class="light">
+    <nav class = "navbar">
+        <ul class = "navbar-nav">
+            <li class = "nav-item">Home</li>
+            <li class = "nav-item">About</li>
+
+            <li class="nav-item has-dropdown">
+            <a href="#">Theme</a>
+            <ul class="dropdown">
+                <li class="dropdown-item">
+                    <a id="light" href="#">light</a>
+                </li>
+                <li class="dropdown-item">
+                    <a id="dark" href="#">dark</a>
+
+                </li>
+                <li class="dropdown-item">
+                    <a id="solar" href="#">solarize</a>
+
+                </li>
+            </ul>
+            </li>
+
+
+            <li class = "nav-item">Login</li>
+        </ul>
+    </nav>
+    <header>
+        <img src="data:image/png;base64,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" class="logo"/>
+        <h1>Animay Creations,<br>Web Developer</h1>
+        <p>Flutter, Firebase, JavaScript, Node.js</p>
+    </header>
+    <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, suscipit reprehenderit. Quia sequi nulla modi quos dignissimos impedit eaque earum non repudiandae esse illo repellat eligendi magni, neque maiores perferendis.</main>
+    
+</body>
+</html>
